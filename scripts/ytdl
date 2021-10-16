@@ -14,7 +14,7 @@ with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from __future__ import print_function, unicode_literals
-import pafy
+import kafay
 import sys
 import os
 
@@ -143,7 +143,7 @@ def main():
     paa('-o', required=False, help="Output filepath", type=str)
 
     args = parser.parse_args()
-    vid = pafy.new(args.url)
+    vid = kafay.new(args.url)
     streams = []
 
     if args.t:
