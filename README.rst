@@ -5,9 +5,6 @@
     :target: https://pypi.python.org/pypi/kafy
 .. image:: https://img.shields.io/pypi/dm/kafy.svg
     :target: https://pypi.org/project/kafy/
-    
-[![Coverage Status](https://coveralls.io/repos/github/SenuGamerBoy/Kafay/badge.svg?branch=develop)](https://coveralls.io/github/SenuGamerBoy/Kafay?branch=develop)
-
 .. image:: https://travis-ci.org/SenuGamerBoy/Kafay.svg?branch=develop
     :target: https://travis-ci.org/SenuGamerBoy/Kafay
 .. image:: https://img.shields.io/pypi/wheel/kafy.svg
