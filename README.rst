@@ -53,23 +53,19 @@ get certain attributes:
 .. code-block:: pycon
     
     >>> video.title
-    'Richard Jones: Introduction to game programming - PyCon 2014'
+    'Python for Beginners - Learn Python in 1 Hour'
 
     >>> video.rating
     5.0
 
     >>> video.viewcount, video.author, video.length
-    (1916, 'PyCon 2014', 10394)
+    (2557209, 'Programming with Mosh', 10394)
 
     >>> video.duration, video.likes, video.dislikes
     ('02:53:14', 25, 0)
 
     >>> print(video.description)
-    Speaker: Richard Jones
-
-    This tutorial will walk the attendees through development of a simple game using PyGame with time left over for some experimentation and exploration of different types of games.
-
-    Slides can be found at: https://speakerdeck.com/pycon2014 and https://github.com/PyCon/2014-slides
+    Speaker: Python for Beginners
 
 
 list available streams for a video:
