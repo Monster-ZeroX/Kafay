@@ -4,8 +4,6 @@
     :target: https://pypi.python.org/pypi/kafy
 .. image:: https://img.shields.io/coveralls/SenuGamerBoy/Kafay/develop.svg
     :target: https://coveralls.io/r/SenuGamerBoy/Kafay?branch=develop
-.. image:: https://landscape.io/github/SenuGamerBoy/Kafay/develop
-    :alt: Code Health
 .. image:: https://travis-ci.org/SenuGamerBoy/Kafay.svg?branch=develop
     :target: https://travis-ci.org/SenuGamerBoy/Kafay
 .. image:: https://img.shields.io/pypi/wheel/Pafy.svg
