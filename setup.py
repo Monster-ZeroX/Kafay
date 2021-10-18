@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-""" setup.py for pafy.
-https://github.com/SenuGamerBoy/Kafay_API
+""" setup.py for kafy.
+
+https://github.com/SenuGamerBoy/Kafay
+
 python setup.py sdist bdist_wheel
+
 """
 
 from setuptools import setup
@@ -15,15 +18,15 @@ setup(
     scripts=['scripts/ytdl'],
     version=__version__,
     description="Retrieve YouTube content and metadata",
-    keywords=["pafy", "API", "YouTube", "youtube", "download", "video"],
+    keywords=["kafy", "API", "YouTube", "youtube", "download", "video"],
     author="SenuGamerBoy",
-    author_email="shamilasamarakoon14@gmail.com",
-    url="https://github.com/SenuGamerBoy/Kafay_API/",
-    download_url="https://github.com/SenuGamerBoy/Kafay_API/tags",
+    author_email="shamilasamarakoon14@gmail@gmail.com",
+    url="https://github.com/SenuGamerBoy/Kafay/",
+    download_url="https://github.com/SenuGamerBoy/Kafay/tags",
     extras_require={
         'youtube-dl-backend': ["youtube-dl"],
         },
-    package_data={"": ["LICENSE", "CHANGELOG", "AUTHORS"]},
+    package_data={"": ["LICENSE", "README.rst", "CHANGELOG", "AUTHORS"]},
     include_package_data=True,
     license='LGPLv3',
     classifiers=[
@@ -52,4 +55,3 @@ setup(
         "Topic :: Internet :: WWW/HTTP"],
     long_description=open("README.rst").read()
 )
-© 2021 GitHub, Inc.
