@@ -4,9 +4,11 @@
     :target: https://pypi.python.org/pypi/kafy
 .. image:: https://img.shields.io/coveralls/SenuGamerBoy/Kafay/develop.svg
     :target: https://coveralls.io/r/SenuGamerBoy/Kafay?branch=develop
+.. image:: https://landscape.io/github/SenuGamerBoy/Kafay/develop
+    :alt: Code Health
 .. image:: https://travis-ci.org/SenuGamerBoy/Kafay.svg?branch=develop
     :target: https://travis-ci.org/SenuGamerBoy/Kafay
-.. image:: https://img.shields.io/pypi/wheel/Pafy.svg
+.. image:: https://img.shields.io/pypi/wheel/kafy.svg
     :target: http://pythonwheels.com/
     :alt: Wheel Status
 
@@ -18,7 +20,7 @@ Features
 - Command line tool (ytdl) for downloading directly from the command line
 - Retrieve the URL to stream the video in a player such as vlc or mplayer
 - Works with age-restricted videos and non-embeddable videos
-- Small, standalone, single importable module file (pafy.py)
+- Small, standalone, single importable module file (kafy.py)
 - Select highest quality stream for download or streaming
 - Download video only (no audio) in m4v or webm format
 - Download audio only (no video) in ogg or m4a format
@@ -35,7 +37,7 @@ Here is how to use the module in your own python code.  For command line tool
 
 .. code-block:: pycon
 
-    >>> import pafy
+    >>> import kafy
 
 create a video instance from a YouTube url:
 
