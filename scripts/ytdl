@@ -1,22 +1,25 @@
-# @SenuGamerBoy
+#!/usr/bin/env python3
 
-""" 
-Kafay - Command Line Downloader Tool - ytdl.
+""" kafy - Command Line Downloader Tool - ytdl.
+
 Copyright (C)  2021 SenuGamerBoy
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
 Software Foundation, either version 3 of the License, or (at your option) any
 later version.
+
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
+
 You should have received a copy of the GNU Lesser General Public License along
 with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 """
 
 from __future__ import print_function, unicode_literals
-import kafay
+import kafy
 import sys
 import os
 
@@ -36,7 +39,7 @@ except ImportError:
         raise
 
 
-__version__ = "0.0.2"
+__version__ = "1.0"
 __author__ = "SenuGamerBoy"
 __license__ = "LGPLv3"
 
@@ -145,7 +148,7 @@ def main():
     paa('-o', required=False, help="Output filepath", type=str)
 
     args = parser.parse_args()
-    vid = kafay.new(args.url)
+    vid = kafy.new(args.url)
     streams = []
 
     if args.t:
