@@ -4,7 +4,7 @@
 .. image:: https://img.shields.io/pypi/v/kafy.svg
     :target: https://pypi.python.org/pypi/kafy
 .. image:: https://img.shields.io/pypi/dm/kafy.svg
-    :target: https://pypi.python.org/pypi/kafy
+    :target: https://pypi.org/project/kafy/
 .. image:: https://travis-ci.org/SenuGamerBoy/Kafay.svg?branch=develop
     :target: https://travis-ci.org/SenuGamerBoy/Kafay
 .. image:: https://img.shields.io/pypi/wheel/kafy.svg
