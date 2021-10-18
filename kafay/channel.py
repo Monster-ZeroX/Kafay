@@ -1,5 +1,5 @@
 import re
-from .kafay import call_gdata
+from .kafy import call_gdata
 from .playlist import Playlist
 from .backend_shared import pyver
 
@@ -7,8 +7,10 @@ from .backend_shared import pyver
 def get_channel(channel_url, basic=False, gdata=False,
                 size=False, callback=None):
     """Return a Channel object
-    The returned kafay and Playlist objects are initialised using the arguments
-    to get_channel() in the manner documented for kafay.new()
+
+    The returned kafy and Playlist objects are initialised using the arguments
+    to get_channel() in the manner documented for kafy.new()
+
     """
 
     return Channel.from_url(channel_url, basic, gdata, size, callback)

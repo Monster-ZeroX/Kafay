@@ -1,17 +1,26 @@
+# -*- coding: utf-8 -*-
+
 """
 kafy.py.
+
 Python library to download YouTube content and retrieve metadata
-https://github.com/SenuGamerBoy/Kafay_API
+
+https://github.com/SenuGamerBoy/Kafay
+
 Copyright (C)  2021 SenuGamerBoy
+
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
 Software Foundation, either version 3 of the License, or (at your option) any
 later version.
+
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
+
 You should have received a copy of the GNU Lesser General Public License along
 with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 """
 
 import sys
@@ -40,7 +49,7 @@ if os.environ.get("KAFY_BACKEND") != "internal":
         backend = "youtube-dl"
     except ImportError:
         raise ImportError(
-               "kafay: youtube-dl not found; you can use the internal backend by "
+               "Kafy: youtube-dl not found; you can use the internal backend by "
                "setting the environmental variable KAFY_BACKEND to \"internal\". "
                "It is not enabled by default because it is not as well maintained "
                "as the youtube-dl backend.")
@@ -80,22 +89,30 @@ def fetch_decode(url, encoding=None):
 
 def new(url, basic=True, gdata=False, size=False,
         callback=None, ydl_opts=None):
-    """ Return a new Kafy instance given a url or video id.
+    """ Return a new kafy instance given a url or video id.
+
     NOTE: The signature argument has been deprecated and now has no effect,
         it will be removed in a future version.
+
     Optional arguments:
         basic - fetch basic metadata and streams
         gdata - fetch gdata info (upload date, description, category)
         size - fetch the size of each stream (slow)(decrypts urls if needed)
         callback - a callback function to receive status strings
+
     If any of the first three above arguments are False, those data items will
     be fetched only when first called for.
+
     The defaults are recommended for most cases. If you wish to create
     many video objects at once, you may want to set basic to False, eg:
-        video = kafay.new(basic=False)
+
+        video = kafy.new(basic=False)
+
     This will be quick because no http requests will be made on initialisation.
+
     Setting size to True will override the basic argument and force basic data
     to be fetched too (basic data is required to obtain Stream objects).
+
     """
     global Kafy
     if Kafy is None:
@@ -163,12 +180,12 @@ def set_categories(categories):
 
 
 def load_cache(newcache):
-    """Loads a dict into kafay's internal cache."""
+    """Loads a dict into kafy's internal cache."""
     set_categories(newcache.get('categories', {}))
 
 
 def dump_cache():
-    """Returns kafay's cache for storing by program."""
+    """Returns kafy's cache for storing by program."""
     return g.cache
 
 

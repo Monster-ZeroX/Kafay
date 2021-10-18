@@ -47,6 +47,7 @@ def call_gdata(api, qs):
 def utf8_replace(txt):
     """
     Replace unsupported characters in unicode string.
+
     :param txt: text to filter
     :type txt: str
     :returns: Unicode text without any characters unsupported by locale
@@ -60,10 +61,3 @@ def utf8_replace(txt):
 def xenc(stuff):
     """ Replace unsupported characters. """
     return utf8_replace(stuff) if not_utf8_environment else stuff
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact

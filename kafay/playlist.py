@@ -1,6 +1,3 @@
-# @SenuGamerBoy
-
-
 import sys
 import re
 import json
@@ -44,8 +41,10 @@ def extract_playlist_id(playlist_url):
 def get_playlist(playlist_url, basic=False, gdata=False,
                  size=False, callback=None):
     """ Return a dict containing Kafy objects from a YouTube Playlist.
+
     The returned Kafy objects are initialised using the arguments to
     get_playlist() in the manner documented for kafy.new()
+
     """
 
     playlist_id = extract_playlist_id(playlist_url)
@@ -308,8 +307,10 @@ class Playlist(object):
 def get_playlist2(playlist_url, basic=False, gdata=False,
                   size=False, callback=None):
     """ Return a Playlist object from a YouTube Playlist.
+
     The returned Kafy objects are initialised using the arguments to
-    get_playlist() in the manner documented for Kafy.new()
+    get_playlist() in the manner documented for kafy.new()
+
     """
 
     return Playlist.from_url(playlist_url, basic, gdata, size, callback)
@@ -317,6 +318,7 @@ def get_playlist2(playlist_url, basic=False, gdata=False,
 
 def dict_for_playlist(v):
     """Returns a dict which can be used to initialise Kafy Object for playlist
+
     """
 
     stats = v.get('statistics', {})

@@ -21,15 +21,15 @@ else:
 early_py_version = sys.version_info[:2] < (2, 7)
 
 from . import g
-from .kafay import fetch_decode, dbg, get_categoryname
-from .backend_shared import Basekafay, BaseStream
+from .kafy import fetch_decode, dbg, get_categoryname
+from .backend_shared import BaseKafy, BaseStream
 from .jsinterp import JSInterpreter
 
 
 funcmap = {}
 
 
-class Internkafay(Basekafay):
+class InternKafy(BaseKafy):
     def __init__(self, *args, **kwargs):
         self.sm = []
         self.asm = []
@@ -39,7 +39,7 @@ class Internkafay(Basekafay):
         self.age_ver = False
         self._formats = None
         self.ciphertag = None  # used by Stream class in url property def
-        super(Internkafay, self).__init__(*args, **kwargs)
+        super(InternKafy, self).__init__(*args, **kwargs)
 
 
     def _fetch_basic(self):
@@ -352,7 +352,7 @@ def _decodesig(sig, js_url, callback):
 
 def fetch_cached(url, callback, encoding=None, dbg_ref="", file_prefix=""):
     """ Fetch url - from tmpdir if already retrieved. """
-    tmpdir = os.path.join(tempfile.gettempdir(), "kafay")
+    tmpdir = os.path.join(tempfile.gettempdir(), "kafy")
 
     if not os.path.exists(tmpdir):
         os.makedirs(tmpdir)
@@ -384,6 +384,7 @@ def fetch_cached(url, callback, encoding=None, dbg_ref="", file_prefix=""):
 
 def prune_files(path, prefix="", age_max=3600 * 24 * 14, count_max=4):
     """ Remove oldest files from path that start with prefix.
+
     remove files older than age_max, leave maximum of count_max files.
     """
     tempfiles = []
@@ -411,10 +412,13 @@ def prune_files(path, prefix="", age_max=3600 * 24 * 14, count_max=4):
 
 def get_js_sm(watchinfo, callback):
     """ Fetch watchinfo page and extract stream map and js funcs if not known.
+
     This function is needed by videos with encrypted signatures.
     If the js url referred to in the watchv page is not a key in funcmap,
     the javascript is fetched and functions extracted.
+
     Returns streammap (list of dicts), js url (str)  and funcs (dict)
+
     """
     m = re.search(g.jsplayer, watchinfo)
     myjson = json.loads(m.group(1))

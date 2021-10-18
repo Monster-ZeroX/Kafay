@@ -27,7 +27,7 @@ class YtdlKafy(BaseKafy):
         ydl_opts = kwargs.get("ydl_opts")
         if ydl_opts:
             self._ydl_opts.update(ydl_opts)
-        super(YtdlKafay, self).__init__(*args, **kwargs)
+        super(YtdlKafy, self).__init__(*args, **kwargs)
 
     def _fetch_basic(self):
         """ Fetch basic data and streams. """
@@ -37,7 +37,7 @@ class YtdlKafy(BaseKafy):
         with youtube_dl.YoutubeDL(self._ydl_opts) as ydl:
             try:
                 self._ydl_info = ydl.extract_info(self.videoid, download=False)
-            # Turn into an IOError since that is what kafay previously raised
+            # Turn into an IOError since that is what Kafy previously raised
             except youtube_dl.utils.DownloadError as e:
                 raise IOError(str(e).replace('YouTube said', 'Youtube says'))
 

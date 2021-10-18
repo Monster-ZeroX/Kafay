@@ -22,7 +22,7 @@ urls = {
     'embed': "https://youtube.com/embed/%s"
 }
 api_key = "AIzaSyCIM4EzNqi1in22f4Z3Ru3iYvLaY8tc3bo"
-user_agent = "kafay " + __version__
+user_agent = "kafy " + __version__
 lifespan = 60 * 60 * 5  # 5 hours
 opener = build_opener()
 opener.addheaders = [('User-Agent', user_agent)]

@@ -20,7 +20,7 @@ else:
 early_py_version = sys.version_info[:2] < (2, 7)
 
 from . import __version__, g
-from .kafay import call_gdata
+from .kafy import call_gdata
 from .playlist import get_playlist2
 from .util import xenc
 
@@ -51,7 +51,7 @@ def extract_video_id(url):
     raise ValueError(err % url)
 
 
-class Basekafay(object):
+class BaseKafy(object):
 
     """ Class to represent a YouTube video. """
 
@@ -148,7 +148,7 @@ class Basekafay(object):
             nfo = "\n".join(["%s: %s" % i for i in info])
 
         else:
-            nfo = "kafay object: %s [%s]" % (self.videoid,
+            nfo = "Kafy object: %s [%s]" % (self.videoid,
                                             self.title[:45] + "..")
 
         return nfo.encode("utf8", "replace") if pyver == 2 else nfo
@@ -346,6 +346,7 @@ class Basekafay(object):
     def _getvideo(self, preftype="any", ftypestrict=True, vidonly=False, quality="max"):
         """
         Return the highest/lowest resolution video available.
+
         Select from video-only streams if vidonly is True
         """
         streams = self.videostreams if vidonly else self.streams
@@ -369,6 +370,7 @@ class Basekafay(object):
     def getbestvideo(self, preftype="any", ftypestrict=True):
         """
         Return the best resolution video-only stream.
+
         set ftypestrict to False to return a non-preferred format if that
         has a higher resolution
         """
@@ -381,6 +383,7 @@ class Basekafay(object):
     def getbest(self, preftype="any", ftypestrict=True):
         """
         Return the highest resolution video+audio stream.
+
         set ftypestrict to False to return a non-preferred format if that
         has a higher resolution
         """
@@ -450,7 +453,7 @@ class Basekafay(object):
         return self._bestthumb
 
     def populate_from_playlist(self, pl_data):
-        """ Populate kafay object with items fetched from playlist data. """
+        """ Populate Kafy object with items fetched from playlist data. """
         self._title = pl_data.get("title")
         self._author = pl_data.get("author")
         self._length = int(pl_data.get("length_seconds", 0))
@@ -533,6 +536,7 @@ class BaseStream(object):
     @property
     def quality(self):
         """ Return quality of stream (bitrate or resolution).
+
         eg, 128k or 640x480 (str)
         """
         return self._quality
@@ -545,6 +549,7 @@ class BaseStream(object):
     @property
     def extension(self):
         """ Return appropriate file extension for stream (str).
+
         Possible values are: 3gp, m4a, m4v, mp4, webm, ogg
         """
         return self._extension
@@ -557,6 +562,7 @@ class BaseStream(object):
     @property
     def mediatype(self):
         """ Return mediatype string (normal, audio or video).
+
         (normal means a stream containing both video and audio.)
         """
         return self._mediatype
@@ -612,8 +618,10 @@ class BaseStream(object):
     def download(self, filepath="", quiet=False, progress="Bytes",
                            callback=None, meta=False, remux_audio=False):
         """ Download.  Use quiet=True to supress output. Return filename.
+
         Use meta=True to append video id and itag to generated filename
         Use remax_audio=True to remux audio file downloads
+
         """
         # pylint: disable=R0912,R0914
         # Too many branches, too many local vars
