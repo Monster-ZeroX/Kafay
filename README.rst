@@ -5,7 +5,7 @@
     :target: https://pypi.python.org/pypi/kafy
 .. image:: https://img.shields.io/pypi/dm/kafy.svg
     :target: https://pypi.python.org/pypi/kafy
-.. image:: https://img.shields.io/coveralls/SenuGamerBoy/Kafay/develop.svg
+.. image:: https://img.shields.io/coveralls.io/github/SenuGamerBoy/Kafay/develop.svg
     :target: https://coveralls.io/github/SenuGamerBoy/Kafay
 .. image:: https://travis-ci.org/SenuGamerBoy/Kafay.svg?branch=develop
     :target: https://travis-ci.org/SenuGamerBoy/Kafay
