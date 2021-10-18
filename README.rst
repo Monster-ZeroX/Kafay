@@ -7,9 +7,12 @@
     :target: https://pypi.org/project/kafy/
 .. image:: https://travis-ci.org/SenuGamerBoy/Kafay.svg?branch=develop
     :target: https://travis-ci.org/SenuGamerBoy/Kafay
+.. image:: https://coveralls.io/repos/github/SenuGamerBoy/Kafay/badge.svg?branch=develop
+    :target: https://coveralls.io/github/SenuGamerBoy/Kafay?branch=develop
 .. image:: https://img.shields.io/pypi/wheel/kafy.svg
     :target: http://pythonwheels.com/
     :alt: Wheel Status
+
 
 Features
 --------
