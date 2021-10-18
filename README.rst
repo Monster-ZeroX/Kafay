@@ -1,4 +1,4 @@
-## 🍀 Kafy
+# 🍀 Kafy
 
 .. image:: https://img.shields.io/pypi/v/kafy.svg
     :target: https://pypi.python.org/pypi/kafy
